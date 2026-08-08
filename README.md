@@ -1,4 +1,13 @@
-## Hi there 👋
+## Hi, I'm an Independent Researcher 👋
+
+I am dedicated to open science and academic research. 
+
+## 🔬 Research & Publications
+* **ORCID ID**: [0009-0001-2726-8459](https://orcid.org/0009-0001-2726-8459)
+* **Zenodo Portfolio**: [[👉 [點此貼上您在 Zenodo 的個人主頁或論文連結]](https://reurl.cc/RROm6r)
+
+*Note: My GitHub account is primarily used as an academic portfolio and repository hosting to connect with open-access datasets rather than public code development.*
+
 
 <!--
 **seiranwind-tech/seiranwind-tech** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
