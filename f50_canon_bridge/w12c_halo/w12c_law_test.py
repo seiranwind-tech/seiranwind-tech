@@ -137,7 +137,9 @@ for gs in range(g0, max_g - 5, gstep):
                 lw = np.concatenate([np.zeros(n), np.log(W + 1e-9), np.zeros(len(halo_pop))])
                 est = tan_rows((sa + attr(zg, pop, lw, self_start=0)).mean(0, keepdims=True), M[None])[0]
                 key = "n10-29" if n < 30 else "n30-99" if n < 100 else "n100+"
-                res[(lawname, delta, key)].append((cos1(est, full), float(np.linalg.norm(est - full) / (np.linalg.norm(full) + 1e-12))))
+                pair = (cos1(est, full), float(np.linalg.norm(est - full) / (np.linalg.norm(full) + 1e-12)))
+                res[(lawname, delta, key)].append(pair)
+                if n >= 30: res[(lawname, delta, "n30+")].append(pair)
 
 out = {"tape": f.split("/")[-1]}
 for (lawname, delta, key), v in sorted(res.items()):
