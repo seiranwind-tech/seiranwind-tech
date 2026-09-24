@@ -1,0 +1,118 @@
+{
+ "FRESH": {
+  "residuals": {
+   "B0_DIRECT_TRANSFER_spaCy": {
+    "FP": 105,
+    "FN": 131,
+    "FP_rescued_by_rival": 10,
+    "FP_own_tail_overestimated": 95,
+    "FN_own_tail_crossed_underpredicted": 131,
+    "all_redraw_rescue_rate": 0.050359712230215826
+   },
+   "B1_GLOVE_REFIT": {
+    "FP": 363,
+    "FN": 105,
+    "FP_rescued_by_rival": 8,
+    "FP_own_tail_overestimated": 355,
+    "FN_own_tail_crossed_underpredicted": 105,
+    "all_redraw_rescue_rate": 0.050359712230215826
+   },
+   "B2_GLOVE_REG": {
+    "FP": 338,
+    "FN": 103,
+    "FP_rescued_by_rival": 8,
+    "FP_own_tail_overestimated": 330,
+    "FN_own_tail_crossed_underpredicted": 103,
+    "all_redraw_rescue_rate": 0.050359712230215826
+   },
+   "B3_GLOVE_RESCUE": {
+    "FP": 363,
+    "FN": 89,
+    "FP_rescued_by_rival": 11,
+    "FP_own_tail_overestimated": 352,
+    "FN_own_tail_crossed_underpredicted": 89,
+    "all_redraw_rescue_rate": 0.050359712230215826
+   },
+   "B1c_GLOVE_THRESH_CAL": {
+    "FP": 15,
+    "FN": 223,
+    "FP_rescued_by_rival": 0,
+    "FP_own_tail_overestimated": 15,
+    "FN_own_tail_crossed_underpredicted": 223,
+    "all_redraw_rescue_rate": 0.050359712230215826
+   }
+  },
+  "oracle_own_tail_extreme_member": {
+   "sign_agree": 0.9993303998469485,
+   "corr": 0.999663314543336,
+   "precision": 0.9496402877697842,
+   "recall": 1.0
+  },
+  "own_tail_crossings_rescued_by_rival": 0.050359712230215826,
+  "large_basin_share_of_B1_FP": 0.9366391184573003
+ },
+ "FRESH2": {
+  "residuals": {
+   "B0_DIRECT_TRANSFER_spaCy": {
+    "FP": 106,
+    "FN": 74,
+    "FP_rescued_by_rival": 2,
+    "FP_own_tail_overestimated": 104,
+    "FN_own_tail_crossed_underpredicted": 74,
+    "all_redraw_rescue_rate": 0.03296703296703297
+   },
+   "B1_GLOVE_REFIT": {
+    "FP": 238,
+    "FN": 56,
+    "FP_rescued_by_rival": 2,
+    "FP_own_tail_overestimated": 236,
+    "FN_own_tail_crossed_underpredicted": 56,
+    "all_redraw_rescue_rate": 0.03296703296703297
+   },
+   "B2_GLOVE_REG": {
+    "FP": 229,
+    "FN": 53,
+    "FP_rescued_by_rival": 2,
+    "FP_own_tail_overestimated": 227,
+    "FN_own_tail_crossed_underpredicted": 53,
+    "all_redraw_rescue_rate": 0.03296703296703297
+   },
+   "B3_GLOVE_RESCUE": {
+    "FP": 243,
+    "FN": 46,
+    "FP_rescued_by_rival": 2,
+    "FP_own_tail_overestimated": 241,
+    "FN_own_tail_crossed_underpredicted": 46,
+    "all_redraw_rescue_rate": 0.03296703296703297
+   },
+   "B1c_GLOVE_THRESH_CAL": {
+    "FP": 46,
+    "FN": 134,
+    "FP_rescued_by_rival": 1,
+    "FP_own_tail_overestimated": 45,
+    "FN_own_tail_crossed_underpredicted": 134,
+    "all_redraw_rescue_rate": 0.03296703296703297
+   }
+  },
+  "oracle_own_tail_extreme_member": {
+   "sign_agree": 0.9994175888177053,
+   "corr": 0.9997253757793656,
+   "precision": 0.967032967032967,
+   "recall": 1.0
+  },
+  "own_tail_crossings_rescued_by_rival": 0.03296703296703297,
+  "large_basin_share_of_B1_FP": 0.907563025210084
+ },
+ "DEV_oracle": {
+  "oracle_own_tail_Gshape_vs_birth_redraw": {
+   "sign_agree": 0.9995716121662145,
+   "corr": 0.9997321510470729,
+   "precision": 0.9680851063829787,
+   "recall": 1.0
+  },
+  "log_tail_scatter_sd_all": 0.45089245336575573,
+  "log_tail_scatter_sd_near_threshold": 0.33061900487129814,
+  "note": "G_shape uses the hidden extreme member y_min; it bounds what a perfect own-tail sketch could reach"
+ },
+ "verdict": "Residual errors are NOT mainly rival rescue (3-5% of own-tail crossings). They are own-tail estimation error of sigma*n^gamma (~33% multiplicative scatter near threshold), concentrated in basins n>50."
+}

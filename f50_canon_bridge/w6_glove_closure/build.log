@@ -1,1 +1,4 @@
 w6_glove_closure/data/DEV 1010956 births 424 [{'birth': 103, 'merge': 743, 'death': 1309, 'split': 0}, {'birth': 176, 'merge': 705, 'death': 1426, 'split': 0}, {'birth': 50, 'merge': 704, 'death': 1312, 'split': 0}, {'birth': 95, 'merge': 653, 'death': 1379, 'split': 0}]
+w6_glove_closure/sealed/FRESH 1006739 births 420 [{'birth': 103, 'merge': 742, 'death': 1317, 'split': 0}, {'birth': 117, 'merge': 755, 'death': 1322, 'split': 0}, {'birth': 117, 'merge': 672, 'death': 1399, 'split': 0}, {'birth': 83, 'merge': 681, 'death': 1357, 'split': 0}]
+w6_glove_closure/sealed/FRESH2 494667 births 292 [{'birth': 163, 'merge': 693, 'death': 1420, 'split': 0}, {'birth': 129, 'merge': 740, 'death': 1343, 'split': 0}]
+ALLDONE

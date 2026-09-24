@@ -1,0 +1,11 @@
+{
+ "oracle_own_tail_Gshape_vs_birth_redraw": {
+  "sign_agree": 0.9995716121662145,
+  "corr": 0.9997321510470729,
+  "precision": 0.9680851063829787,
+  "recall": 1.0
+ },
+ "log_tail_scatter_sd_all": 0.45089245336575573,
+ "log_tail_scatter_sd_near_threshold": 0.33061900487129814,
+ "note": "G_shape uses the hidden extreme member y_min; it bounds what a perfect own-tail sketch could reach"
+}
