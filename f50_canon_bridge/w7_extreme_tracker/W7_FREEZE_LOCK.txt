@@ -1,0 +1,3 @@
+f9c268731ff587064f7def08d664cf8261b5781789292c1a8de5240f473adb9b  PROTOCOL_W7.md
+d6e295774003f38449e907d43f4d4212f3752b056f9eff36bdc0e6c0a51f3294  w7_tracker.py
+52cc0cb665366e275d335344626dbfbf7ecb6dad5343812bbb2d3a98a54cec20  ../../f50_canon_bridge/w7_extreme_tracker/../w1/canon_recorder.py
