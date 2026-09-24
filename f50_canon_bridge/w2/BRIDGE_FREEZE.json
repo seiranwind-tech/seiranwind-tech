@@ -1,0 +1,57 @@
+{
+  "worker": "W2",
+  "line": "CANON-BRIDGE-R1 (canonical engine, F40 V3.9R3)",
+  "description": "Frozen L1.5 observable-bridge models for G_birth on the canonical-engine DEV table, fit by OLS on DEV blocks/seeds 0-3 (all rows: phase==49 in full + seeded 20% sample of other phases, rng seed 12345). Bases copied UNCHANGED from the PU line's preregistration (f50_pu_bridge/w2/PREREG.json); this freeze is a coefficient refit only. Threshold fixed at 0 for all families (event_hat = F_hat > 0).",
+  "threshold": 0.0,
+  "source_hashes": {
+    "canon_recorder.py_sha256": "facc817b531f8ddb575d1fbe51744f39cd082016c8d2b705db74bfc06adfa8bb",
+    "DEV_table.npz_sha256": "2f7cd7067573423ef0838ca160ec544f40b28adf8ef3ce45338f3f6e809b0e4c"
+  },
+  "families": {
+    "F0_LOW": {
+      "role": "reference / own-only ansatz",
+      "basis": ["1", "yo", "sqrt(2*log(n))*sqrt(1-R**2)"],
+      "formula_string": "G_F0 = a0 + a1*yo + a2*sqrt(2*log(n))*sqrt(1-R**2)",
+      "coefficients": {
+        "a0": 0.04466612407890401,
+        "a1": -0.14510186954246476,
+        "a2": 0.1253619118956314
+      }
+    },
+    "F1_LEGAL": {
+      "role": "PRIMARY",
+      "basis": ["1", "yo", "yb", "sqrt(2*log(n))*sqrt(1-R**2)", "skew", "cob", "dmu"],
+      "formula_string": "G_F1 = a0 + a1*yo + a2*yb + a3*sqrt(2*log(n))*sqrt(1-R**2) + a4*skew + a5*cob + a6*dmu",
+      "coefficients": {
+        "a0": -0.04522528601147161,
+        "a1": -0.052811738452468976,
+        "a2": -0.049464183517215675,
+        "a3": 0.12982607418357833,
+        "a4": 0.7527409104608137,
+        "a5": 0.04476542251996097,
+        "a6": -0.0057510635202136775
+      }
+    },
+    "F2_AUG": {
+      "role": "augmented (uses PROPOSED_AUGMENTATION columns so, sb, rho)",
+      "basis": ["1", "yo", "yb", "sqrt(2*log(n))*sqrt(1-R**2)", "skew", "cob", "dmu",
+                "sqrt(2*log(n))*so", "sqrt(2*log(n))*sb", "rho"],
+      "formula_string": "G_F2 = a0 + a1*yo + a2*yb + a3*sqrt(2*log(n))*sqrt(1-R**2) + a4*skew + a5*cob + a6*dmu + a7*sqrt(2*log(n))*so + a8*sqrt(2*log(n))*sb + a9*rho",
+      "coefficients": {
+        "a0": 0.6291478446055013,
+        "a1": -0.7273009369982016,
+        "a2": -0.008443823135307976,
+        "a3": 0.025577981800864687,
+        "a4": -0.06055651501978589,
+        "a5": 0.008551490405684556,
+        "a6": -0.0007126847028858113,
+        "a7": 1.0006987358961885,
+        "a8": -0.06659787381185646,
+        "a9": 8.227544489762552e-11
+      }
+    }
+  },
+  "fit_method": "ordinary least squares (numpy.linalg.lstsq), unconstrained, no regularization/hyperparameter search",
+  "evaluator": "w2/bridge_eval.py: predict(family, table_dict) -> np.ndarray implements these equations exactly",
+  "note": "F0_LOW is provided for completeness/reference; the task's frozen refit-on-all-seeds requirement targets F1_LEGAL (PRIMARY) and F2_AUG, both included above with full precision. rho's coefficient in F2_AUG is ~0 (numerically negligible), consistent with the near-zero rho coefficient seen on the PU line."
+}

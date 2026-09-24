@@ -1,0 +1,28 @@
+{
+  "F1_LEGAL": {
+    "n_cells": 318,
+    "n_rows": 147243,
+    "frac_rows_in_ambiguous_cells": 0.34533390381885726,
+    "mean_conditional_sign_entropy": 0.11105266701668597,
+    "coords": [
+      "sqrt(2*log(n))*sqrt(1-R**2)",
+      "yb",
+      "cob",
+      "skew"
+    ],
+    "n_bins": 5
+  },
+  "F2_AUG": {
+    "n_cells": 266,
+    "n_rows": 147243,
+    "frac_rows_in_ambiguous_cells": 0.2382659956670266,
+    "mean_conditional_sign_entropy": 0.10487151344737042,
+    "coords": [
+      "yo",
+      "sqrt(2*log(n))*so",
+      "sqrt(2*log(n))*sqrt(1-R**2)",
+      "sqrt(2*log(n))*sb"
+    ],
+    "n_bins": 5
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "worker": "W2",
+  "purpose": "Preregistration of L1.5 observable-bridge model families for the CANONICAL engine line (CANON-BRIDGE-R1). Refit on canonical engine: bases and target/threshold definition are copied UNCHANGED from f50_pu_bridge/w2/PREREG.json (the PU line's preregistration) -- this is a coefficient refit only, no new basis functions were introduced, since a basis change would constitute a new preregistration.",
+  "source_prereg": "f50_pu_bridge/w2/PREREG.json (bases copied verbatim; only the split_protocol seed labels and compute_note sample sizes differ, to match the canonical DEV table's seed range 0-3 and row count)",
+  "target": "G_birth (signed margin); event_hat = (F_hat > 0)",
+  "threshold": 0.0,
+  "split_protocol": {
+    "fit_seeds": [0, 1, 2],
+    "validate_seeds": [3],
+    "final_freeze_seeds": [0, 1, 2, 3],
+    "note": "Internal DEV split only, on the canonical-engine table (blocks 0-3). FRESH (blocks 4-7) is never read or fit against by W2."
+  },
+  "legal_columns": ["n", "age", "R", "skew", "yo", "yb", "cob", "dR", "dskew", "dmu"],
+  "augmentation_columns": ["so", "sb", "rho"],
+  "predeclared_transforms": [
+    "sqrt(2*log(n))  -- extreme-value scale factor for max of n roughly-Gaussian projections",
+    "sqrt(1 - R**2)  -- circular/spherical spread proxy from mean resultant length R",
+    "products of the above with legal first-moment columns"
+  ],
+  "families": {
+    "F0_LOW": {
+      "description": "Own-only Samuelson/extreme-value ansatz: predicts the basin's own-axis extreme deviation only, ignoring rival centroid entirely.",
+      "basis": [
+        "1",
+        "yo",
+        "sqrt(2*log(n)) * sqrt(1 - R**2)"
+      ],
+      "formula_string": "G_F0 = a0 + a1*yo + a2*sqrt(2*log(n))*sqrt(1-R**2)",
+      "n_coeffs": 3,
+      "fit_method": "ordinary least squares (numpy.linalg.lstsq)"
+    },
+    "F1_LEGAL": {
+      "role": "PRIMARY",
+      "description": "Joint own+rival first-moment family using only LEGAL columns: models max(s_own, s_best) via the own and rival mean projections yo, yb, plus the same extreme-value spread term, plus shape (skew), rival geometry (cob), and recent-motion (dmu).",
+      "basis": [
+        "1",
+        "yo",
+        "yb",
+        "sqrt(2*log(n)) * sqrt(1 - R**2)",
+        "skew",
+        "cob",
+        "dmu"
+      ],
+      "formula_string": "G_F1 = a0 + a1*yo + a2*yb + a3*sqrt(2*log(n))*sqrt(1-R**2) + a4*skew + a5*cob + a6*dmu",
+      "n_coeffs": 7,
+      "fit_method": "ordinary least squares (numpy.linalg.lstsq)"
+    },
+    "F2_AUG": {
+      "description": "F1_LEGAL plus the PROPOSED_AUGMENTATION second-moment columns (so, sb, rho), each so/sb scaled by the same extreme-value factor a_n = sqrt(2*log(n)) used elsewhere; rho enters unscaled as a correlation-shape term.",
+      "basis": [
+        "1",
+        "yo",
+        "yb",
+        "sqrt(2*log(n)) * sqrt(1 - R**2)",
+        "skew",
+        "cob",
+        "dmu",
+        "sqrt(2*log(n)) * so",
+        "sqrt(2*log(n)) * sb",
+        "rho"
+      ],
+      "formula_string": "G_F2 = a0 + a1*yo + a2*yb + a3*sqrt(2*log(n))*sqrt(1-R**2) + a4*skew + a5*cob + a6*dmu + a7*sqrt(2*log(n))*so + a8*sqrt(2*log(n))*sb + a9*rho",
+      "n_coeffs": 10,
+      "fit_method": "ordinary least squares (numpy.linalg.lstsq)"
+    }
+  },
+  "metrics_to_report": [
+    "sign agreement (fraction of rows where sign(F_hat) == sign(G_birth))",
+    "precision/recall of events (G_birth > 0)",
+    "Pearson correlation of F_hat vs G_birth (signed-margin correlation)",
+    "RMSE(F_hat, G_birth)",
+    "false-early count: F_hat > 0 while G_birth <= 0 (predicted birth that does not occur)",
+    "false-late count: F_hat <= 0 while G_birth > 0 (missed/late birth)",
+    "all of the above also restricted to phase==49 (the redraw step, where births structurally occur)"
+  ],
+  "fiber_ambiguity_protocol": {
+    "description": "On DEV (all seeds), quantile-bin the ~4 highest-importance legal inputs of F1 (5 bins each), and separately for F2's inputs, then report the fraction of rows falling in cells that contain both signs of G_birth, and the row-weighted mean conditional binary sign entropy within cells.",
+    "importance_rule": "feature importance = |coefficient| * std(feature) computed on the fit (seeds 0-2) sample; top 4 non-intercept basis terms selected per family.",
+    "n_bins_per_coord": 5
+  },
+  "compute_note": "677k total DEV rows (canonical line is already modest); all fitting/evaluation/fiber analysis uses phase==49 rows in full plus a seeded 20% uniform random sample of all other-phase rows (rng seed 12345), matching the PU line's protocol for consistency.",
+  "prereg_timestamp_note": "Written before any model was fit on the canonical table; frozen coefficients for F1_LEGAL and F2_AUG are produced only afterward, on all seeds 0-3, in BRIDGE_FREEZE.json."
+}
