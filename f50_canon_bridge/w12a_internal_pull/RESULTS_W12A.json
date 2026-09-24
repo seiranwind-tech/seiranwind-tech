@@ -1,0 +1,72 @@
+{
+ "law": "AR1_ENV",
+ "coefficients": {
+  "rho": 0.9990596941276166,
+  "beta": 1.579285859519589e-05,
+  "gamma": 0.0
+ },
+ "protocol_sha256": "8c070a8d212fc504dbe21dce7092e0eb0d204eac1ca3202a22a2b9b158269aa6",
+ "freeze_commit": "fccd20c",
+ "pass_criterion": "AR1_ENV 250-step skill > AR3 250-step skill on BOTH prospective tapes",
+ "discovery_validation": {
+  "tape_2_1357_13_zo": {
+   "5steps": {
+    "AR3": 0.9565610418609466,
+    "AR1_ENV": 0.9394905902311971
+   },
+   "50steps": {
+    "AR3": 0.8807047870709148,
+    "AR1_ENV": 0.8068503574878505
+   },
+   "250steps": {
+    "AR3": 0.42384609137647833,
+    "AR1_ENV": 0.3901859190547393
+   }
+  },
+  "tape_1_9753_22_zo": {
+   "5steps": {
+    "AR3": 0.9576716207167553,
+    "AR1_ENV": 0.9446267371492257
+   },
+   "50steps": {
+    "AR3": 0.894447059605182,
+    "AR1_ENV": 0.8251047162198867
+   },
+   "250steps": {
+    "AR3": 0.4842313075442739,
+    "AR1_ENV": 0.423475342057697
+   }
+  }
+ },
+ "prospective_evaluation": {
+  "tape_2_8080_32_zo": {
+   "5steps": {
+    "AR3": 0.9630251817508559,
+    "AR1_ENV": 0.9426364276932996
+   },
+   "50steps": {
+    "AR3": 0.8789410277998074,
+    "AR1_ENV": 0.7863810493573287
+   },
+   "250steps": {
+    "AR3": 0.39795246846830157,
+    "AR1_ENV": 0.33064357292195146
+   }
+  },
+  "tape_3_4242_31_zo": {
+   "5steps": {
+    "AR3": 0.9643986249531499,
+    "AR1_ENV": 0.9422423324509446
+   },
+   "50steps": {
+    "AR3": 0.8799003041785742,
+    "AR1_ENV": 0.785491982120509
+   },
+   "250steps": {
+    "AR3": 0.3959065206974882,
+    "AR1_ENV": 0.35600990605458815
+   }
+  }
+ },
+ "verdict": "FAIL: AR1_ENV does not beat AR3 at 250 steps on either prospective tape (0.3306 vs 0.3980 on tape_2_8080_32_zo; 0.3560 vs 0.3959 on tape_3_4242_31_zo). Negative result, reported honestly."
+}
