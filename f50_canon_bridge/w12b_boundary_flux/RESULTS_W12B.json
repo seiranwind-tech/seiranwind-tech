@@ -1,0 +1,148 @@
+{
+ "frozen_coefficients": {
+  "beta_pair_full": [
+   -6.666873839249263,
+   3.1154287382879398,
+   -0.19302865198682742,
+   0.3426163685962038,
+   -1.9604929327574852,
+   0.2780582468019149
+  ],
+  "beta_pair_full_names": [
+   "intercept",
+   "sim",
+   "log_n_a",
+   "log_n_b",
+   "rank",
+   "spread_a"
+  ],
+  "beta_pair_const": [
+   -6.693530729010572
+  ],
+  "beta_pair_nn": [
+   -8.411610903211939,
+   4.947461842965106
+  ],
+  "beta_found_full": [
+   -4.811817608442928,
+   0.22058266098410076,
+   0.39798275112628034
+  ],
+  "beta_found_const": [
+   -3.998979949446851
+  ]
+ },
+ "pass_criterion": {
+  "criterion_1": "loglik(full) > loglik(const) AND loglik(full) > loglik(nn), pooled and per-tape",
+  "criterion_2": "AUC(full) >= 0.9 on each prospective tape",
+  "criterion_3": "dest_top1_acc(full) >= dest_top1_acc(nn) - 0.05 on each prospective tape"
+ },
+ "per_tape": {
+  "tape_2_8080_32_zo": {
+   "pair_metrics": {
+    "tape_group": "tape_2_8080_32_zo",
+    "n_pairs": 53464,
+    "n_events": 32.0,
+    "loglik_full": -120.72639060835836,
+    "loglik_const": -293.5880791236051,
+    "loglik_nn": -188.10475561870567,
+    "deviance_full": 195.32294285576265,
+    "deviance_const": 541.046319886256,
+    "deviance_nn": 330.07967287645727,
+    "auc_full": 0.9992052057243008,
+    "auc_nn_baseline": 0.9874623876083375,
+    "auc_sim_only": 0.9975158223759537,
+    "dest_top1_acc_full": 1.0,
+    "dest_top1_acc_nn": 1.0,
+    "n_pairs_with_event_for_top1": 21,
+    "calib_total_pred_mean": 0.6684876452511143,
+    "calib_total_actual_mean": 0.5333333333333333,
+    "calib_corr": 0.2546909408441002
+   },
+   "found_metrics": {
+    "tape_group": "tape_2_8080_32_zo",
+    "n_rows": 1680,
+    "n_events": 26.0,
+    "loglik_full": -134.20041192082454,
+    "loglik_const": -140.43811574688885,
+    "deviance_full": 226.57601651211382,
+    "deviance_const": 239.05142416424235
+   },
+   "criterion_1_loglik_beats_baselines": true,
+   "criterion_2_auc_ge_threshold": true,
+   "criterion_3_top1_within_margin_of_nn": true,
+   "tape_pass": true
+  },
+  "tape_3_4242_31_zo": {
+   "pair_metrics": {
+    "tape_group": "tape_3_4242_31_zo",
+    "n_pairs": 41158,
+    "n_events": 25.0,
+    "loglik_full": -109.67431624791362,
+    "loglik_const": -219.0220953020865,
+    "loglik_nn": -146.70337240451107,
+    "deviance_full": 170.73492685694714,
+    "deviance_const": 389.4304849652929,
+    "deviance_nn": 244.79303917014198,
+    "auc_full": 0.9956929385261178,
+    "auc_nn_baseline": 0.9695922675483379,
+    "auc_sim_only": 0.9936923631707751,
+    "dest_top1_acc_full": 0.9583333333333334,
+    "dest_top1_acc_nn": 0.9583333333333334,
+    "n_pairs_with_event_for_top1": 24,
+    "calib_total_pred_mean": 0.8834771214985707,
+    "calib_total_actual_mean": 0.4166666666666667,
+    "calib_corr": 0.6281958504641055
+   },
+   "found_metrics": {
+    "tape_group": "tape_3_4242_31_zo",
+    "n_rows": 1458,
+    "n_events": 14.0,
+    "loglik_full": -83.69138052392682,
+    "loglik_const": -84.10346868628919,
+    "deviance_full": 142.1553497700934,
+    "deviance_const": 142.97952609481808
+   },
+   "criterion_1_loglik_beats_baselines": true,
+   "criterion_2_auc_ge_threshold": true,
+   "criterion_3_top1_within_margin_of_nn": true,
+   "tape_pass": true
+  }
+ },
+ "verdict": {
+  "overall_pass": true,
+  "note": "overall_pass requires both prospective tapes to individually pass criteria 1-3, and the pooled log-likelihood to beat both baselines."
+ },
+ "pooled": {
+  "pair_metrics": {
+   "tape_group": "POOLED_prospective",
+   "n_pairs": 94622,
+   "n_events": 57.0,
+   "loglik_full": -230.400706856272,
+   "loglik_const": -512.6101744256916,
+   "loglik_nn": -334.8081280232167,
+   "deviance_full": 366.0578697127098,
+   "deviance_const": 930.4768048515491,
+   "deviance_nn": 574.8727120465993,
+   "auc_full": 0.9977304794564805,
+   "auc_nn_baseline": 0.9676350721869188,
+   "auc_sim_only": 0.9960220537527916,
+   "dest_top1_acc_full": 0.9777777777777777,
+   "dest_top1_acc_nn": 0.9777777777777777,
+   "n_pairs_with_event_for_top1": 45,
+   "calib_total_pred_mean": 1.551964766749685,
+   "calib_total_actual_mean": 0.95,
+   "calib_corr": 0.5018059440767927
+  },
+  "found_metrics": {
+   "tape_group": "POOLED_prospective",
+   "n_rows": 3138,
+   "n_events": 40.0,
+   "loglik_full": -217.89179244475133,
+   "loglik_const": -224.54158443317803,
+   "deviance_full": 368.7313662822072,
+   "deviance_const": 382.0309502590605
+  },
+  "criterion_1_loglik_beats_baselines_pooled": true
+ }
+}
