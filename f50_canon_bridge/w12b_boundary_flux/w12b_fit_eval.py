@@ -7,7 +7,7 @@ Fits on the union of fit tapes, evaluates on each val tape separately and pooled
 import sys, json, numpy as np
 
 # ---------- IRLS Poisson GLM (log link) ----------
-def poisson_glm_fit(Xd, y, n_iter=50, ridge=1e-6):
+def poisson_glm_fit(Xd, y, n_iter=100, ridge=2.0):
     n, p = Xd.shape
     beta = np.zeros(p)
     for it in range(n_iter):
