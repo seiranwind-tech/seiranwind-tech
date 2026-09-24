@@ -1,0 +1,18 @@
+{
+ "tape": "tape_0_1357_11.npz",
+ "h": 12,
+ "macro_events_late": 76,
+ "to_own_born_track": 23,
+ "to_existing_group": 53,
+ "dest_existing_rank_among_groups_by_centre_sim(0=nearest)": {
+  "n": 53,
+  "frac_rank0": 0.6792452830188679,
+  "frac_rank_le2": 1.0,
+  "sim_dest_median": 0.9295574426651001,
+  "sim_typical_median": -0.04278465732932091
+ },
+ "macro_K_first_last_late": [
+  82,
+  33
+ ]
+}

@@ -1,0 +1,52 @@
+{
+ "tape": "tape_1_1357_12.npz",
+ "raw": {
+  "events_per_gate": 31.516666666666666,
+  "K_mean": 48.766666666666666,
+  "centre_roughness": {
+   "mean_deg": 0.1642564982175827,
+   "p99_deg": 0.956298291683197,
+   "max_deg": 22.10957145690918
+  }
+ },
+ "river_h4": {
+  "events_per_gate": 1.0333333333333334,
+  "K_mean": 47.083333333333336,
+  "frac_wells_wandering": 0.0025833333333333333,
+  "centre_roughness": {
+   "mean_deg": 0.1565539389848709,
+   "p99_deg": 0.9345285892486572,
+   "max_deg": 22.259296417236328
+  }
+ },
+ "river_h8": {
+  "events_per_gate": 0.9833333333333333,
+  "K_mean": 45.083333333333336,
+  "frac_wells_wandering": 0.004575,
+  "centre_roughness": {
+   "mean_deg": 0.15521004796028137,
+   "p99_deg": 0.9463223218917847,
+   "max_deg": 22.44502067565918
+  }
+ },
+ "river_h12": {
+  "events_per_gate": 1.0666666666666667,
+  "K_mean": 43.416666666666664,
+  "frac_wells_wandering": 0.006566666666666667,
+  "centre_roughness": {
+   "mean_deg": 0.15317855775356293,
+   "p99_deg": 0.9560036063194275,
+   "max_deg": 23.179550170898438
+  }
+ },
+ "river_h20": {
+  "events_per_gate": 0.8833333333333333,
+  "K_mean": 41.38333333333333,
+  "frac_wells_wandering": 0.010633333333333333,
+  "centre_roughness": {
+   "mean_deg": 0.15406595170497894,
+   "p99_deg": 0.9584445953369141,
+   "max_deg": 22.94920539855957
+  }
+ }
+}

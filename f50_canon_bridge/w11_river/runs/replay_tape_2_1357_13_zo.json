@@ -1,0 +1,52 @@
+{
+ "tape": "tape_2_1357_13_zo.npz",
+ "T": 6000,
+ "gates": 120,
+ "K_first_last": [
+  1965,
+  28
+ ],
+ "K_every_10_gates": [
+  1965,
+  1048,
+  664,
+  395,
+  233,
+  152,
+  94,
+  68,
+  49,
+  44,
+  48,
+  32
+ ],
+ "label_changes_per_gate_mean": 53.55,
+ "label_changes_per_gate_late(second_half)": 21.166666666666668,
+ "births_total": 58,
+ "births_second_half": 21,
+ "birth_fate_counts": {
+  "home": 43,
+  "elsewhere": 8,
+  "alive_at_end": 7
+ },
+ "birth_life_gates_quantiles_p50_p90_p99": [
+  11.5,
+  44.60000000000005,
+  81.0
+ ],
+ "birth_life_eq1_gate_frac": 0.0,
+ "birth_size_quantiles_p50_p90_max": [
+  1.0,
+  1.0,
+  1.0
+ ],
+ "excursions_subsampled": {
+  "events": 525,
+  "returned_within_20_gates": 494,
+  "return_frac": 0.940952380952381,
+  "lag_p50_p90": [
+   2.0,
+   10.0
+  ]
+ }
+}
