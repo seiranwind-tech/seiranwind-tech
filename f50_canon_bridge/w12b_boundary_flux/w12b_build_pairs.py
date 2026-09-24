@@ -11,7 +11,7 @@ def nr(x):
     return x / (np.linalg.norm(x, axis=-1, keepdims=True) + 1e-12)
 
 def build(f, h=12, g0=60):
-    D = np.load(f, allow_pickle=True)
+    D = np.load(f, allow_pickle=True, mmap_mode="r")
     trk = D["trk"]; Z = D["Z"]; T, N = trk.shape
     G = np.arange(49, T, 50); H = trk[G]
     # --- replicate w11_river.py's HOME construction (causal, hysteresis h) ---
