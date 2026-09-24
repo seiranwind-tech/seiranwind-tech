@@ -1,0 +1,107 @@
+{
+ "runs/DISC.json": {
+  "seed": [
+   12345,
+   0,
+   1
+  ],
+  "steps": 6000,
+  "births": 103,
+  "lineage": {
+   "birth": 103,
+   "merge": 743,
+   "death": 1309,
+   "split": 0
+  },
+  "mismatches": {
+   "label_mismatch_steps": 0,
+   "track_mismatch_steps": 0,
+   "age_mismatch_steps": 0,
+   "K_mismatch_steps": 0,
+   "basin_graph_mismatch_steps": 0
+  },
+  "centre_max_abs_err": 0.0,
+  "centre_bitwise_equal_steps": 6000,
+  "H_S_bytes_per_step": 79206.2,
+  "H_T_bytes_per_gate": 2856.366666666667,
+  "thinned": {
+   "gates": 120,
+   "track_disagree_frac_sum": 109.62899999999996,
+   "K_abs_diff_sum": 7367,
+   "centre_angle_err_max_deg": 0.0,
+   "births_shadow2": 5660,
+   "track_disagree_frac_mean": 0.9135749999999997,
+   "K_abs_diff_mean": 61.391666666666666
+  }
+ },
+ "prospective/P_3131_b0_s9.json": {
+  "seed": [
+   3131,
+   0,
+   9
+  ],
+  "steps": 6000,
+  "births": 124,
+  "lineage": {
+   "birth": 124,
+   "merge": 680,
+   "death": 1415,
+   "split": 0
+  },
+  "mismatches": {
+   "label_mismatch_steps": 0,
+   "track_mismatch_steps": 0,
+   "age_mismatch_steps": 0,
+   "K_mismatch_steps": 0,
+   "basin_graph_mismatch_steps": 0
+  },
+  "centre_max_abs_err": 0.0,
+  "centre_bitwise_equal_steps": 6000,
+  "H_S_bytes_per_step": 83743.8,
+  "H_T_bytes_per_gate": 3208.0,
+  "thinned": {
+   "gates": 120,
+   "track_disagree_frac_sum": 110.69649999999989,
+   "K_abs_diff_sum": 7994,
+   "centre_angle_err_max_deg": 0.0,
+   "births_shadow2": 5838,
+   "track_disagree_frac_mean": 0.9224708333333324,
+   "K_abs_diff_mean": 66.61666666666666
+  }
+ },
+ "prospective/P_5757_b1_s11.json": {
+  "seed": [
+   5757,
+   1,
+   11
+  ],
+  "steps": 6000,
+  "births": 107,
+  "lineage": {
+   "birth": 107,
+   "merge": 757,
+   "death": 1288,
+   "split": 0
+  },
+  "mismatches": {
+   "label_mismatch_steps": 0,
+   "track_mismatch_steps": 0,
+   "age_mismatch_steps": 0,
+   "K_mismatch_steps": 0,
+   "basin_graph_mismatch_steps": 0
+  },
+  "centre_max_abs_err": 0.0,
+  "centre_bitwise_equal_steps": 6000,
+  "H_S_bytes_per_step": 79356.4,
+  "H_T_bytes_per_gate": 2924.5,
+  "thinned": {
+   "gates": 120,
+   "track_disagree_frac_sum": 110.84699999999988,
+   "K_abs_diff_sum": 7687,
+   "centre_angle_err_max_deg": 0.0,
+   "births_shadow2": 5480,
+   "track_disagree_frac_mean": 0.923724999999999,
+   "K_abs_diff_mean": 64.05833333333334
+  }
+ }
+}

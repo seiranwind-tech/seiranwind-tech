@@ -1,0 +1,38 @@
+{
+ "block": 0,
+ "perm_seed": 12345,
+ "cfg_seed": 1,
+ "results": {
+  "steps": 6000,
+  "label_mismatch_steps": 0,
+  "track_mismatch_steps": 0,
+  "age_mismatch_steps": 0,
+  "K_mismatch_steps": 0,
+  "basin_graph_mismatch_steps": 0,
+  "centre_max_abs_err": 0.0,
+  "centre_bitwise_equal_steps": 6000,
+  "first_failure": null,
+  "births": 103,
+  "reassigns": 120,
+  "payload": {
+   "H_S_bytes": 475237200,
+   "H_T_bytes": 342764
+  },
+  "gate_sign_mismatch_with_shadow_state": 0,
+  "engine_lineage": {
+   "birth": 103,
+   "merge": 743,
+   "death": 1309,
+   "split": 0
+  },
+  "thinned_shadow_HS_only_at_gates": {
+   "gates": 120,
+   "track_disagree_frac_sum": 109.62899999999996,
+   "K_abs_diff_sum": 7367,
+   "centre_angle_err_max_deg": 0.0,
+   "births_shadow2": 5660,
+   "track_disagree_frac_mean": 0.9135749999999997,
+   "K_abs_diff_mean": 61.391666666666666
+  }
+ }
+}
