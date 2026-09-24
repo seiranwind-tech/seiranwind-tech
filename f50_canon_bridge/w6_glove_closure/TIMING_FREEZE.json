@@ -1,0 +1,131 @@
+{
+ "family": "B1_GLOVE_REFIT",
+ "selected_window": 5,
+ "dev": {
+  "1": {
+   "window": 1,
+   "n": 13149,
+   "median_ratio": 0.9276869940990164,
+   "median_abs_err": 26.07695218483738,
+   "p90_abs_err": 271.4212543007337,
+   "within_x2": 0.5002661799376379,
+   "median_abs_logratio": 0.6920806338880116,
+   "calibration": {
+    "1-5": {
+     "n": 423,
+     "median_actual": 13.0
+    },
+    "5-10": {
+     "n": 706,
+     "median_actual": 21.0
+    },
+    "10-20": {
+     "n": 1476,
+     "median_actual": 28.0
+    },
+    "20-50": {
+     "n": 4652,
+     "median_actual": 51.0
+    },
+    "50-1000000000.0": {
+     "n": 5791,
+     "median_actual": 59.0
+    }
+   }
+  },
+  "3": {
+   "window": 3,
+   "n": 14632,
+   "median_ratio": 1.6555306613753409,
+   "median_abs_err": 35.0459766725931,
+   "p90_abs_err": 374.0574272969989,
+   "within_x2": 0.46329961727720065,
+   "median_abs_logratio": 0.7619572246434273,
+   "calibration": {
+    "1-5": {
+     "n": 345,
+     "median_actual": 13.0
+    },
+    "5-10": {
+     "n": 483,
+     "median_actual": 18.0
+    },
+    "10-20": {
+     "n": 1091,
+     "median_actual": 23.0
+    },
+    "20-50": {
+     "n": 3555,
+     "median_actual": 37.0
+    },
+    "50-1000000000.0": {
+     "n": 9087,
+     "median_actual": 60.0
+    }
+   }
+  },
+  "5": {
+   "window": 5,
+   "n": 15488,
+   "median_ratio": 1.3306366211951715,
+   "median_abs_err": 20.169525531044133,
+   "p90_abs_err": 255.53136580944422,
+   "within_x2": 0.6104726239669421,
+   "median_abs_logratio": 0.4822968715641905,
+   "calibration": {
+    "1-5": {
+     "n": 320,
+     "median_actual": 11.0
+    },
+    "5-10": {
+     "n": 424,
+     "median_actual": 15.0
+    },
+    "10-20": {
+     "n": 931,
+     "median_actual": 18.0
+    },
+    "20-50": {
+     "n": 4020,
+     "median_actual": 33.0
+    },
+    "50-1000000000.0": {
+     "n": 9720,
+     "median_actual": 64.0
+    }
+   }
+  },
+  "10": {
+   "window": 10,
+   "n": 15437,
+   "median_ratio": 1.3327673257233883,
+   "median_abs_err": 20.432776382064176,
+   "p90_abs_err": 255.0242240621392,
+   "within_x2": 0.6128133704735376,
+   "median_abs_logratio": 0.4855082450453002,
+   "calibration": {
+    "1-5": {
+     "n": 287,
+     "median_actual": 11.0
+    },
+    "5-10": {
+     "n": 406,
+     "median_actual": 16.0
+    },
+    "10-20": {
+     "n": 1024,
+     "median_actual": 19.0
+    },
+    "20-50": {
+     "n": 4056,
+     "median_actual": 33.0
+    },
+    "50-1000000000.0": {
+     "n": 9592,
+     "median_actual": 64.0
+    }
+   }
+  }
+ },
+ "rule": "Gdot=-dybar/dt + beta*n^gamma*dsigma/dt (past-only, n const); predict T=-Gamma/Gdot when Gamma<0,Gdot>0"
+}

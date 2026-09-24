@@ -1,0 +1,178 @@
+{
+ "families": {
+  "B0_DIRECT_TRANSFER_spaCy": {
+   "type": "phys",
+   "beta": 0.706525245438733,
+   "gamma": 0.3447280636528175,
+   "note": "W5 spaCy F3_POWER_1P, not refit"
+  },
+  "B1_GLOVE_REFIT": {
+   "type": "phys",
+   "beta": 0.5374847794380506,
+   "gamma": 0.4558883220256376
+  },
+  "B2_GLOVE_REG": {
+   "type": "reg",
+   "gamma": 0.4558883220256376,
+   "coef": [
+    0.8769616400645569,
+    -0.9729410142405307,
+    0.5034476066733687
+   ]
+  },
+  "B3_GLOVE_RESCUE": {
+   "type": "phys_rescue",
+   "beta": 0.5016604235684914,
+   "gamma": 0.4558883220256376,
+   "lam": 0.004726380635741032,
+   "rescue": "cob"
+  },
+  "B1c_GLOVE_THRESH_CAL": {
+   "type": "phys",
+   "beta": 0.32000000000000006,
+   "gamma": 0.4558883220256376,
+   "note": "beta calibrated at threshold 0 on DEV redraw rows (FP+FN), DEV-only",
+   "beta_train_blocks012": 0.32000000000000006,
+   "val_block3_errors": 62,
+   "val_block3_errors_B1": 200,
+   "val_block3_errors_B0": 61
+  }
+ },
+ "threshold": 0.0,
+ "dev_table_sha": "7754391cba7a39bea94b17184e20b9baef761217c307640c0bcce104b78d38e1",
+ "dev_redraw_metrics": {
+  "B0_DIRECT_TRANSFER_spaCy": {
+   "sign_agree": 0.9878147460612119,
+   "corr": 0.9544412508455112,
+   "precision": 0.5325670498084292,
+   "recall": 0.5091575091575091
+  },
+  "B1_GLOVE_REFIT": {
+   "sign_agree": 0.9721547908039412,
+   "corr": 0.9544757086927518,
+   "precision": 0.26435045317220546,
+   "recall": 0.6410256410256411
+  },
+  "B2_GLOVE_REG": {
+   "sign_agree": 0.973725546194488,
+   "corr": 0.9545087482241004,
+   "precision": 0.27892234548335976,
+   "recall": 0.6446886446886447
+  },
+  "B3_GLOVE_RESCUE": {
+   "sign_agree": 0.9730591651197106,
+   "corr": 0.9538843392625549,
+   "precision": 0.2790346907993967,
+   "recall": 0.6776556776556777
+  },
+  "B1c_GLOVE_THRESH_CAL": {
+   "sign_agree": 0.9889571136179732,
+   "corr": 0.9257328739055201,
+   "precision": 0.9767441860465116,
+   "recall": 0.15384615384615385
+  }
+ },
+ "dev_residual_audit": {
+  "B0_DIRECT_TRANSFER_spaCy": {
+   "FP": 122,
+   "FN": 134,
+   "FP_rescued_by_rival": 5,
+   "FP_own_tail_overestimated": 117,
+   "FN_own_tail_crossed_underpredicted": 134,
+   "all_redraw_rescue_rate": 0.031914893617021274
+  },
+  "B1_GLOVE_REFIT": {
+   "FP": 487,
+   "FN": 98,
+   "FP_rescued_by_rival": 6,
+   "FP_own_tail_overestimated": 481,
+   "FN_own_tail_crossed_underpredicted": 98,
+   "all_redraw_rescue_rate": 0.031914893617021274
+  },
+  "B2_GLOVE_REG": {
+   "FP": 455,
+   "FN": 97,
+   "FP_rescued_by_rival": 6,
+   "FP_own_tail_overestimated": 449,
+   "FN_own_tail_crossed_underpredicted": 97,
+   "all_redraw_rescue_rate": 0.031914893617021274
+  },
+  "B1c_GLOVE_THRESH_CAL": {
+   "FP": 1,
+   "FN": 231,
+   "FP_rescued_by_rival": 0,
+   "FP_own_tail_overestimated": 1,
+   "FN_own_tail_crossed_underpredicted": 231,
+   "all_redraw_rescue_rate": 0.031914893617021274
+  }
+ },
+ "rescue_selection": {
+  "baseline_B1_val_errors": 209,
+  "candidates": {
+   "rival_gap": {
+    "lam": -0.00501417062200324,
+    "beta": 0.5387010508474169,
+    "val_errors": 204,
+    "val": {
+     "FP": 185,
+     "FN": 19,
+     "FP_rescued_by_rival": 1,
+     "FP_own_tail_overestimated": 184,
+     "FN_own_tail_crossed_underpredicted": 19,
+     "all_redraw_rescue_rate": 0.014925373134328358
+    }
+   },
+   "cob": {
+    "lam": 0.004740130612924613,
+    "beta": 0.5106075601404957,
+    "val_errors": 194,
+    "val": {
+     "FP": 181,
+     "FN": 13,
+     "FP_rescued_by_rival": 1,
+     "FP_own_tail_overestimated": 180,
+     "FN_own_tail_crossed_underpredicted": 13,
+     "all_redraw_rescue_rate": 0.014925373134328358
+    }
+   },
+   "sb_tail": {
+    "lam": 0.02396429798192932,
+    "beta": 0.5198498642548399,
+    "val_errors": 205,
+    "val": {
+     "FP": 190,
+     "FN": 15,
+     "FP_rescued_by_rival": 1,
+     "FP_own_tail_overestimated": 189,
+     "FN_own_tail_crossed_underpredicted": 15,
+     "all_redraw_rescue_rate": 0.014925373134328358
+    }
+   },
+   "rho": {
+    "lam": -3.12233509004485e-12,
+    "beta": 0.5476373035891118,
+    "val_errors": 209,
+    "val": {
+     "FP": 191,
+     "FN": 18,
+     "FP_rescued_by_rival": 1,
+     "FP_own_tail_overestimated": 190,
+     "FN_own_tail_crossed_underpredicted": 18,
+     "all_redraw_rescue_rate": 0.014925373134328358
+    }
+   }
+  },
+  "selected": "cob",
+  "selected_improves": true
+ },
+ "dev_fiber": {
+  "(yo,so,n)": {
+   "mixed_frac": 0.25788947593888334,
+   "cells": 94
+  },
+  "(yo,so,n,cob)": {
+   "mixed_frac": 0.19353610357465847,
+   "cells": 366
+  }
+ }
+}
