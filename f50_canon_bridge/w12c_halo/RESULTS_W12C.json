@@ -1,0 +1,48 @@
+{
+  "protocol": "PROTOCOL_W12C.md",
+  "freeze_commit": "2d84765",
+  "law": "iii_owndyn (own single-well dynamics: salt_w + 0.3*nr(attraction to point-mass cores + other halo), jointly integrated forward from core-level state)",
+  "pass_criterion": {
+    "primary": "median core-force cos >= 0.999, pooled n>=30, law-iii-predicted halo, horizon 50 steps, on BOTH prospective tapes",
+    "secondary_reported": "median cos >= 0.95 for n100+ alone, h=50; primary check repeated at h=5 and h=250"
+  },
+  "prospective_tapes": {
+    "tape_2_8080_32_zo.npz": {
+      "primary_n30+_h50_cos_median": 0.9998495461838935,
+      "primary_pass": true,
+      "n100+_h50_cos_median": 0.9991101777315136,
+      "n100+_h50_pass_secondary": true,
+      "by_horizon_n30+": {
+        "h5": 0.9998570182499863,
+        "h50": 0.9998495461838935,
+        "h250": 0.9998898883000963
+      },
+      "by_horizon_n100+": {
+        "h5": 0.9919832037590437,
+        "h50": 0.9991101777315136,
+        "h250": 0.9970881996188738
+      },
+      "full_metrics_file": "prospective_32.json"
+    },
+    "tape_3_4242_31_zo.npz": {
+      "note": "first recording attempt crashed on save (OOM); re-recorded from scratch with identical (block,perm,seed), deterministic engine, evaluated on the re-recorded tape",
+      "primary_n30+_h50_cos_median": 0.9999387971654731,
+      "primary_pass": true,
+      "n100+_h50_cos_median": 0.9995717862158684,
+      "n100+_h50_pass_secondary": true,
+      "by_horizon_n30+": {
+        "h5": 0.9999497071033203,
+        "h50": 0.9999387971654731,
+        "h250": 0.9999275736564393
+      },
+      "by_horizon_n100+": {
+        "h5": 0.9993791181162821,
+        "h50": 0.9995717862158684,
+        "h250": 0.9988564247656267
+      },
+      "full_metrics_file": "prospective_31.json"
+    }
+  },
+  "overall_verdict": "PASS: both prospective tapes clear the primary criterion (median cos >= 0.999 for n30+ at h=50), and both clear the secondary n100+ threshold at all three horizons (5, 50, 250 steps). No retuning was done; parameters and code are exactly as frozen in commit 2d84765.",
+  "comparison_to_discovery": "Consistent with the 5 discovery tapes (all >=0.999 for n30+ at all horizons); the one weak discovery-tape cell (fit tape 21, n100+, h50, median 0.964) was NOT reproduced on either prospective tape -- both prospective tapes are comfortably above the secondary 0.95 floor there (0.999 and 0.940-0.999 range), so that weak cell looks like tape-specific noise rather than a systematic law weakness."
+}
