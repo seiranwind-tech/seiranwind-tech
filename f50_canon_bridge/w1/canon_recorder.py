@@ -100,4 +100,4 @@ def build(blocks, out):
 
 if __name__ == "__main__":
     split, out = sys.argv[1], sys.argv[2]
-    build({"dev": [0, 1, 2, 3], "fresh": [4, 5, 6, 7]}[split], out)
+    build({"dev": [0, 1, 2, 3], "fresh": [4, 5, 6, 7], "fresh2": [8, 9]}[split], out)
