@@ -1,0 +1,3 @@
+export F50_ENGINE_DIR=/tmp/claude-0/-home-user-seiranwind-tech/a678a4e4-1091-5af0-b47e-7a1f1a816968/scratchpad/eng/F50_Compoud_eye_G3_v0.1.5/legacy/V39R3_FROZEN F50_VEC=/tmp/claude-0/-home-user-seiranwind-tech/a678a4e4-1091-5af0-b47e-7a1f1a816968/scratchpad/glove300.npy F50_WORDS=/tmp/claude-0/-home-user-seiranwind-tech/a678a4e4-1091-5af0-b47e-7a1f1a816968/scratchpad/glove_words.txt OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 F50_T=6000 F50_T0=1500
+cd /home/user/seiranwind-tech/f50_canon_bridge
+python3 w1/canon_recorder.py dev w6_glove_closure/data/DEV && python3 w1/canon_recorder.py fresh w6_glove_closure/sealed/FRESH && python3 w1/canon_recorder.py fresh2 w6_glove_closure/sealed/FRESH2 && echo ALLDONE

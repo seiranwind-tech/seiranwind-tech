@@ -21,9 +21,12 @@ def make_engine(block, n=2000, seed=1):
     idx = np.sort(perm[block * n:(block + 1) * n])
     cfg = E.ScalableRunConfigV32(profile="F40_V3_9_NATIVE_L1_NONCANONICAL", glove_path="none",
                                  output_dir="/tmp/o", n_wells=n, dimension=V.shape[1], total_steps=2600, seed=seed)
-    return E.ScalableF40EngineV32(cfg, [f"w{i}" for i in idx], V[idx])
+    wf = os.environ.get("F50_WORDS")
+    names = open(wf).read().split("\n") if wf else None
+    words = [names[i] for i in idx] if names else [f"w{i}" for i in idx]
+    return E.ScalableF40EngineV32(cfg, words, V[idx])
 
-def record(block, T=2600, t0=800):
+def record(block, T=int(os.environ.get("F50_T", 2600)), t0=int(os.environ.get("F50_T0", 800))):
     eng = make_engine(block); thr = float(eng.assignment_threshold); R_EVERY = eng.config.basin_reassign_every
     first_seen, prev, rows, moves, births = {}, {}, [], [], []
     last_c = {}

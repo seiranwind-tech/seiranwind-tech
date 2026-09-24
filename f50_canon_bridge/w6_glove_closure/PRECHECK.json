@@ -1,0 +1,23 @@
+{
+ "engine_sha": "4a71aeb4a66a8a071a6b6f9a9b065687d237909aea5e89a537ee6d80d2aa3b1d",
+ "glove_sha": "a0997bb3a3866b4b48fc44503969457c57379ff03cca03ab289f2f07c4948bdc",
+ "bytes": 24177360,
+ "detected_format": "WORD2VEC_BINARY",
+ "loader_kind": "WORD2VEC_BINARY",
+ "rows": 20000,
+ "dims": 300,
+ "nan": 0,
+ "inf": 0,
+ "first_words": [
+  "the",
+  ",",
+  ".",
+  "of",
+  "to",
+  "and",
+  "in",
+  "a"
+ ],
+ "engine_sha_ok": true,
+ "glove_sha_ok": true
+}
