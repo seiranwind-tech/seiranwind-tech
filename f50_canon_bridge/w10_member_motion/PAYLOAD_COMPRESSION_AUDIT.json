@@ -1,0 +1,17 @@
+{
+ "samples": 90,
+ "bytes_per_HS_update_raw": 125533.33333333333,
+ "bytes_per_HS_update_best_lossless": 97095.5,
+ "amortized_bytes_per_engine_step_raw": 25106.666666666664,
+ "amortized_bytes_per_engine_step_best": 19419.1,
+ "bytes_per_basin_raw": 1200,
+ "ratios": {
+  "raw": 1.0,
+  "zlib_raw": 1.078339277338974,
+  "zlib_xor_vs_prev": 1.2928851834877346,
+  "zlib_unnormalized_m": 1.0621297986917133
+ },
+ "best_method": "float32 XOR vs previous delivery + zlib-6",
+ "W9_metric_correction": "W9 reported H_S bytes averaged over ALL engine steps (~80 KB/step incl. early K~2000). Correct split: per H_S update = K*300*4 bytes (1,200 B per basin); amortized per engine step = that / 5.",
+ "verdict": "PAYLOAD_COMPRESSION_ONLY: max lossless ratio 1.29x; not a scientific closure"
+}

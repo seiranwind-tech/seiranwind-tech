@@ -1,0 +1,43 @@
+{
+ "engine_sha": "4a71aeb4a66a8a071a6b6f9a9b065687d237909aea5e89a537ee6d80d2aa3b1d",
+ "glove_sha": "a0997bb3a3866b4b48fc44503969457c57379ff03cca03ab289f2f07c4948bdc",
+ "w9_shadow_sha": "07ef512ce4a4bb54668bc42fc1082275d3c0678265dfff057a8d4d76aba27b00",
+ "instruction_sha": "10bdfbccaf55de6f6aee6bcd7377c39d942e42bd667a1571872ffa5e876dcf27",
+ "freeze_lock_sha": "1e6af7919c7afca9ccb8bb9a2408f2804981a6cf6b6d44b1df25659314e2b45e",
+ "force_reconstruction_max_abs_err": 2.9802322387695312e-08,
+ "runs": {
+  "runs/DISC_cadence.json": {
+   "perm_seed": 12345,
+   "block": 0,
+   "cfg_seed": 1,
+   "lineage": {
+    "birth": 103,
+    "merge": 743,
+    "death": 1309,
+    "split": 0
+   }
+  },
+  "prospective/P_2468_b0_s13.json": {
+   "perm_seed": 2468,
+   "block": 0,
+   "cfg_seed": 13,
+   "lineage": {
+    "birth": 60,
+    "merge": 731,
+    "death": 1275,
+    "split": 0
+   }
+  },
+  "prospective/P_8642_b1_s17.json": {
+   "perm_seed": 8642,
+   "block": 1,
+   "cfg_seed": 17,
+   "lineage": {
+    "birth": 88,
+    "merge": 659,
+    "death": 1379,
+    "split": 0
+   }
+  }
+ }
+}

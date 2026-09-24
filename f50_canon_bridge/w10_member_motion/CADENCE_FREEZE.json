@@ -1,0 +1,16 @@
+{
+ "cadences": [
+  5,
+  10,
+  15,
+  20,
+  25,
+  50
+ ],
+ "predictors": [
+  "HOLD",
+  "EXTRAP"
+ ],
+ "gates_always_receive_HS": true,
+ "frozen_in": "W10_FREEZE_LOCK.txt"
+}

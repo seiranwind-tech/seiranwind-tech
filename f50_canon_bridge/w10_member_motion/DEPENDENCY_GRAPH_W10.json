@@ -1,0 +1,14 @@
+{
+ "nodes": {
+  "z_w (zin)": "member-level L1",
+  "zout_w, zop_w": "member-level L1 hidden field (own dynamics: blade + salt, wall clip)",
+  "teeth_w, mask_w, skew_w": "static but member-level (per-word, N x 4 x 300)",
+  "labels, well kNN": "L1.5-native / static known",
+  "salt_w = 0.5(f_salt(z_w) - z_w(z_w.f_salt))": "member-level (needs z_w and teeth_w); not a function of basin moments",
+  "wave_w = 0.6(zout_w' - zop_w)/wall": "member-level hidden field; sum over basin is exactly aggregatable ONLY if zout sums are tracked, but zout itself needs member-level blade/salt/clip",
+  "A_w = normalize(sum_v softmax_v(z_w.z_v/h) z_v - z_w)": "global-member-kernel (all N wells); normalize per well",
+  "z_w+ = normalize(z_w + dt d_w)": "memberwise normalization -> sum does not commute with normalize",
+  "m_i+ = sum_{w in i} z_w+": "not exactly aggregatable from (n_i, m_i, any zin moments) \u2014 see counterexample P2"
+ },
+ "verdict": "Delta m_i depends on member-level zin, member-level hidden zout/zop, per-well static teeth, a global N-body kernel, and per-well normalization"
+}

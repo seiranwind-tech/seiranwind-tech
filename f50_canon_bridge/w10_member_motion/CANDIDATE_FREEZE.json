@@ -1,0 +1,8 @@
+{
+ "S0": "(n_i, m_i)",
+ "S1": "(n_i, m_i, directional second moments)",
+ "S2": "(n_i, m_i, full M2_i) diagnostic",
+ "S3": "(n, m, low-rank M2, tail stats, dm_{t-1})",
+ "test": "constructive: P1 keeps (n,m) and changes M2; P2 keeps ALL basin zin moments (swap two members' zin) \u2014 any S0..S3 is identical under P2",
+ "low_rank_basis_regression": "not run: P2 already shows no function of basin zin moments is exact; a basis fit could only be approximate"
+}
