@@ -1,0 +1,64 @@
+{
+ "engine_sha": "4a71aeb4a66a8a071a6b6f9a9b065687d237909aea5e89a537ee6d80d2aa3b1d",
+ "glove_sha": "a0997bb3a3866b4b48fc44503969457c57379ff03cca03ab289f2f07c4948bdc",
+ "protocol_sha": "61303239bd6ae0fd7a5e28997a56941367e8528bd39cee8a9ffaae68cdab5cc2",
+ "harness_sha": "af3bf867aac788b302c30fbd0a089541d8b78d66728e52ba225ceae06b06f55b",
+ "freeze_lock_sha": "5e49de08581039a27190e1bb5259ab7d28250c2e6ed60079b6168b571df8c40e",
+ "runs": [
+  {
+   "block": 0,
+   "perm_seed": 12345,
+   "cfg_seed": 1,
+   "lineage": {
+    "birth": 103,
+    "merge": 743,
+    "death": 1309,
+    "split": 0
+   }
+  },
+  {
+   "block": 0,
+   "perm_seed": 4242,
+   "cfg_seed": 5,
+   "lineage": {
+    "birth": 169,
+    "merge": 713,
+    "death": 1410,
+    "split": 0
+   }
+  },
+  {
+   "block": 1,
+   "perm_seed": 4242,
+   "cfg_seed": 7,
+   "lineage": {
+    "birth": 65,
+    "merge": 719,
+    "death": 1307,
+    "split": 0
+   }
+  },
+  {
+   "block": 0,
+   "perm_seed": 9191,
+   "cfg_seed": 5,
+   "lineage": {
+    "birth": 152,
+    "merge": 696,
+    "death": 1403,
+    "split": 0
+   }
+  },
+  {
+   "block": 1,
+   "perm_seed": 9191,
+   "cfg_seed": 7,
+   "lineage": {
+    "birth": 93,
+    "merge": 753,
+    "death": 1293,
+    "split": 0
+   }
+  }
+ ]
+}

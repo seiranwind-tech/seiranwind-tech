@@ -1,0 +1,33 @@
+{
+ "prospective": {
+  "birth_basins": 301,
+  "multi_birth_basins": 96,
+  "max_NB": 7,
+  "max_global_orphans": 10,
+  "multiplicity_hist": {
+   "1": 205,
+   "2": 57,
+   "3": 21,
+   "4": 8,
+   "5": 5,
+   "6": 3,
+   "7": 2
+  },
+  "budget_hit": 0
+ },
+ "discovery": {
+  "birth_basins": 61,
+  "multi_birth_basins": 22,
+  "max_NB": 8,
+  "max_global_orphans": 11,
+  "multiplicity_hist": {
+   "1": 39,
+   "2": 12,
+   "3": 7,
+   "5": 1,
+   "6": 1,
+   "8": 1
+  },
+  "budget_hit": 0
+ }
+}

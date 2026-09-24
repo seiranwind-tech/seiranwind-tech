@@ -1,0 +1,19 @@
+{
+ "base_arrays_used": [
+  "own (N\u00d7d dot, computed in _reassign_sparse)",
+  "best_score (N\u00d7k\u00d7d einsum, computed in _reassign_sparse)",
+  "labels"
+ ],
+ "handoff_ops": [
+  "q = max(own, best)  O(N)",
+  "segmented min / count over labels  O(N)",
+  "orphan list = where(q<thr)  O(N)"
+ ],
+ "NO_ADDITIONAL_HIGH_DIMENSIONAL_SCAN": true,
+ "orphan_condition_identity": "orphan == (best<thr)&(own<thr) == max(own,best)<thr (asserted every gate)",
+ "engine_counter_checks": {
+  "orphan_candidates_mismatch": 0,
+  "near_miss_mismatch": 0
+ },
+ "note": "harness recomputes own/best for audit only; engine counters _birth_orphan_candidates/_birth_near_misses match -> same arrays"
+}

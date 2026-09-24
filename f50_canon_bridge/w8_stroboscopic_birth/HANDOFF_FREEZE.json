@@ -1,0 +1,9 @@
+{
+ "H1": "q_min per basin (float32)",
+ "H2": "(q_min float32, N_B uint16)",
+ "H3_k": "bottom-k (q,id,own) + q_(k+1), k in {8,16,32,64}",
+ "H4": "q_min per basin + (id,own) per orphan",
+ "threshold": 0.9,
+ "budget": 256,
+ "frozen_in": "W8_FREEZE_LOCK.txt"
+}

@@ -1,0 +1,61 @@
+{
+ "block": 0,
+ "perm_seed": 12345,
+ "cfg_seed": 1,
+ "lineage": {
+  "birth": 103,
+  "merge": 743,
+  "death": 1309,
+  "split": 0
+ },
+ "results": {
+  "gates": 91,
+  "basin_readouts": 9848,
+  "sign_mismatch": 0,
+  "count_mismatch_engine_counter": 0,
+  "near_miss_mismatch": 0,
+  "births_count_mismatch": 0,
+  "identity_violation": 0,
+  "budget_hit": 0,
+  "budget_selection_mismatch": 0,
+  "overflow": {
+   "8": 0,
+   "16": 0,
+   "32": 0,
+   "64": 0
+  },
+  "overflow_basins": {
+   "8": 0,
+   "16": 0,
+   "32": 0,
+   "64": 0
+  },
+  "multiplicity_hist": {
+   "1": 39,
+   "2": 12,
+   "3": 7,
+   "5": 1,
+   "6": 1,
+   "8": 1
+  },
+  "max_NB": 8,
+  "max_global_orphans": 11,
+  "multi_birth_basins": 22,
+  "birth_basins": 61,
+  "payload_bytes": {
+   "H1": 39392,
+   "H2": 59088,
+   "H3_8": 494756,
+   "H3_16": 767588,
+   "H3_32": 1139012,
+   "H3_64": 1594736,
+   "H4": 40216
+  },
+  "reset_seed": {
+   "argmin_in_stale_bottom16_or_entrants": 9415,
+   "total": 9415
+  },
+  "extra_high_dim_ops_for_handoff": 0,
+  "gates_expected_fraction_ok": true
+ }
+}

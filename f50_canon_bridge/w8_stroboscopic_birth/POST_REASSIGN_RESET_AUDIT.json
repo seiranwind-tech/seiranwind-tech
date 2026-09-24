@@ -1,0 +1,10 @@
+{
+ "reset_seed_prospective": {
+  "argmin_in_stale_bottom16_or_entrants": 41237,
+  "total": 41244
+ },
+ "hit_rate": 0.9998302783435167,
+ "definition": "argmin q at t_r+1 contained in (pre-reassign bottom-16 from base scan) \u222a (wells whose track changed at the reassign)",
+ "exact_birth_path_needs_reset": false,
+ "note": "exact birth gate uses only the base scan at each t_r; the bottom-k reset is only for the early-warning tracker"
+}

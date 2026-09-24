@@ -1,0 +1,191 @@
+{
+ "prospective": {
+  "gates": 364,
+  "basin_readouts": 43000,
+  "sign_mismatch": 0,
+  "count_mismatch_engine_counter": 0,
+  "near_miss_mismatch": 0,
+  "births_count_mismatch": 0,
+  "identity_violation": 0,
+  "budget_hit": 0,
+  "budget_selection_mismatch": 0,
+  "birth_basins": 301,
+  "multi_birth_basins": 96,
+  "extra_high_dim_ops_for_handoff": 0,
+  "max_NB": 7,
+  "max_global_orphans": 10,
+  "overflow_gates": {
+   "8": 0,
+   "16": 0,
+   "32": 0,
+   "64": 0
+  },
+  "overflow_basins": {
+   "8": 0,
+   "16": 0,
+   "32": 0,
+   "64": 0
+  },
+  "multiplicity_hist": {
+   "1": 205,
+   "2": 57,
+   "3": 21,
+   "4": 8,
+   "5": 5,
+   "6": 3,
+   "7": 2
+  },
+  "payload_bytes_total": {
+   "H1": 172000,
+   "H2": 258000,
+   "H3_8": 1896412,
+   "H3_16": 2892448,
+   "H3_32": 4251460,
+   "H3_64": 5663212,
+   "H4": 175768
+  },
+  "payload_bytes_per_gate": {
+   "H1": 472.5274725274725,
+   "H2": 708.7912087912088,
+   "H3_8": 5209.923076923077,
+   "H3_16": 7946.285714285715,
+   "H3_32": 11679.835164835165,
+   "H3_64": 15558.274725274725,
+   "H4": 482.8791208791209
+  },
+  "reset_seed": {
+   "argmin_in_stale_bottom16_or_entrants": 41237,
+   "total": 41244
+  },
+  "reset_seed_hit_rate": 0.9998302783435167
+ },
+ "discovery": {
+  "gates": 91,
+  "basin_readouts": 9848,
+  "sign_mismatch": 0,
+  "count_mismatch_engine_counter": 0,
+  "near_miss_mismatch": 0,
+  "births_count_mismatch": 0,
+  "identity_violation": 0,
+  "budget_hit": 0,
+  "budget_selection_mismatch": 0,
+  "birth_basins": 61,
+  "multi_birth_basins": 22,
+  "extra_high_dim_ops_for_handoff": 0,
+  "max_NB": 8,
+  "max_global_orphans": 11,
+  "overflow_gates": {
+   "8": 0,
+   "16": 0,
+   "32": 0,
+   "64": 0
+  },
+  "overflow_basins": {
+   "8": 0,
+   "16": 0,
+   "32": 0,
+   "64": 0
+  },
+  "multiplicity_hist": {
+   "1": 39,
+   "2": 12,
+   "3": 7,
+   "5": 1,
+   "6": 1,
+   "8": 1
+  },
+  "payload_bytes_total": {
+   "H1": 39392,
+   "H2": 59088,
+   "H3_8": 494756,
+   "H3_16": 767588,
+   "H3_32": 1139012,
+   "H3_64": 1594736,
+   "H4": 40216
+  },
+  "payload_bytes_per_gate": {
+   "H1": 432.8791208791209,
+   "H2": 649.3186813186813,
+   "H3_8": 5436.879120879121,
+   "H3_16": 8435.032967032967,
+   "H3_32": 12516.615384615385,
+   "H3_64": 17524.571428571428,
+   "H4": 441.9340659340659
+  },
+  "reset_seed": {
+   "argmin_in_stale_bottom16_or_entrants": 9415,
+   "total": 9415
+  },
+  "reset_seed_hit_rate": 1.0
+ },
+ "per_run": [
+  {
+   "perm_seed": 4242,
+   "block": 0,
+   "cfg_seed": 5,
+   "gates": 91,
+   "basin_readouts": 11489,
+   "sign_mismatch": 0,
+   "count_mismatch_engine_counter": 0,
+   "near_miss_mismatch": 0,
+   "births_count_mismatch": 0,
+   "identity_violation": 0,
+   "budget_hit": 0,
+   "budget_selection_mismatch": 0,
+   "birth_basins": 111,
+   "multi_birth_basins": 40,
+   "extra_high_dim_ops_for_handoff": 0
+  },
+  {
+   "perm_seed": 4242,
+   "block": 1,
+   "cfg_seed": 7,
+   "gates": 91,
+   "basin_readouts": 9720,
+   "sign_mismatch": 0,
+   "count_mismatch_engine_counter": 0,
+   "near_miss_mismatch": 0,
+   "births_count_mismatch": 0,
+   "identity_violation": 0,
+   "budget_hit": 0,
+   "budget_selection_mismatch": 0,
+   "birth_basins": 48,
+   "multi_birth_basins": 11,
+   "extra_high_dim_ops_for_handoff": 0
+  },
+  {
+   "perm_seed": 9191,
+   "block": 0,
+   "cfg_seed": 5,
+   "gates": 91,
+   "basin_readouts": 11107,
+   "sign_mismatch": 0,
+   "count_mismatch_engine_counter": 0,
+   "near_miss_mismatch": 0,
+   "births_count_mismatch": 0,
+   "identity_violation": 0,
+   "budget_hit": 0,
+   "budget_selection_mismatch": 0,
+   "birth_basins": 72,
+   "multi_birth_basins": 30,
+   "extra_high_dim_ops_for_handoff": 0
+  },
+  {
+   "perm_seed": 9191,
+   "block": 1,
+   "cfg_seed": 7,
+   "gates": 91,
+   "basin_readouts": 10684,
+   "sign_mismatch": 0,
+   "count_mismatch_engine_counter": 0,
+   "near_miss_mismatch": 0,
+   "births_count_mismatch": 0,
+   "identity_violation": 0,
+   "budget_hit": 0,
+   "budget_selection_mismatch": 0,
+   "birth_basins": 70,
+   "multi_birth_basins": 15,
+   "extra_high_dim_ops_for_handoff": 0
+  }
+ ]
+}
