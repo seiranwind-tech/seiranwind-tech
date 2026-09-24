@@ -1,0 +1,66 @@
+{
+ "discovery": [
+  {
+   "block": 0,
+   "gate": {
+    "match": 91,
+    "mismatch": 0,
+    "budget_hit": 0
+   },
+   "births_max": 11,
+   "lineage": {
+    "birth": 103,
+    "merge": 743,
+    "death": 1309,
+    "split": 0
+   }
+  },
+  {
+   "block": 1,
+   "gate": {
+    "match": 91,
+    "mismatch": 0,
+    "budget_hit": 0
+   },
+   "births_max": 12,
+   "lineage": {
+    "birth": 176,
+    "merge": 705,
+    "death": 1426,
+    "split": 0
+   }
+  }
+ ],
+ "prospective": [
+  {
+   "block": 0,
+   "gate": {
+    "match": 91,
+    "mismatch": 0,
+    "budget_hit": 0
+   },
+   "births_max": 4,
+   "lineage": {
+    "birth": 51,
+    "merge": 687,
+    "death": 1326,
+    "split": 0
+   }
+  },
+  {
+   "block": 1,
+   "gate": {
+    "match": 91,
+    "mismatch": 0,
+    "budget_hit": 0
+   },
+   "births_max": 12,
+   "lineage": {
+    "birth": 187,
+    "merge": 693,
+    "death": 1435,
+    "split": 0
+   }
+  }
+ ]
+}

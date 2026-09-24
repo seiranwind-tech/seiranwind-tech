@@ -1,0 +1,30 @@
+{
+ "certified_guard_modes": [
+  "GUARD_global_1",
+  "GUARD_basin_1",
+  "GUARD_local_1",
+  "GUARD_global_2",
+  "GUARD_basin_2",
+  "GUARD_local_2",
+  "GUARD_global_4",
+  "GUARD_basin_4",
+  "GUARD_local_4",
+  "GUARD_global_8",
+  "GUARD_basin_8",
+  "GUARD_local_8",
+  "GUARD_global_16",
+  "GUARD_basin_16",
+  "GUARD_local_16"
+ ],
+ "eta_variants_identical": true,
+ "pass_but_wrong_total": 0,
+ "sign_mismatch_total": 0,
+ "refresh_rate_by_k": {
+  "1": 1.0,
+  "2": 0.789394996511512,
+  "4": 0.6508521877803249,
+  "8": 0.5552676168643477,
+  "16": 0.45200837237117514
+ },
+ "note": "Guard evaluated lazily at the redraw readout; a rebuild at every reassign step (piggybacking on the engine scan) is part of every mode."
+}

@@ -1,0 +1,50 @@
+{
+ "prospective_sign_mismatch_by_nbin": {
+  "AUTO_1": {
+   "51-200": 1,
+   "6-20": 9,
+   "21-50": 7,
+   "2-5": 3,
+   ">200": 2
+  },
+  "GUARD_global_1": {},
+  "GUARD_basin_1": {},
+  "GUARD_local_1": {},
+  "AUTO_2": {
+   "51-200": 1,
+   "21-50": 4,
+   "6-20": 3
+  },
+  "GUARD_global_2": {},
+  "GUARD_basin_2": {},
+  "GUARD_local_2": {},
+  "AUTO_4": {
+   "21-50": 3
+  },
+  "GUARD_global_4": {},
+  "GUARD_basin_4": {},
+  "GUARD_local_4": {},
+  "AUTO_8": {},
+  "GUARD_global_8": {},
+  "GUARD_basin_8": {},
+  "GUARD_local_8": {},
+  "AUTO_16": {},
+  "GUARD_global_16": {},
+  "GUARD_basin_16": {},
+  "GUARD_local_16": {}
+ },
+ "event_aware": [
+  {
+   "dirty_frac_mean": 0.1658277777777778,
+   "dirty_frac_max": 0.737,
+   "k_event_max": 205,
+   "k_event_median": 5.5
+  },
+  {
+   "dirty_frac_mean": 0.15937777777777778,
+   "dirty_frac_max": 0.716,
+   "k_event_max": 352,
+   "k_event_median": 8.0
+  }
+ ]
+}
