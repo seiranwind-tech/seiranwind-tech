@@ -1,0 +1,13 @@
+W12A freeze lock -- do not edit PROTOCOL_W12A.md after this point without a new freeze.
+
+sha256(PROTOCOL_W12A.md) = 8c070a8d212fc504dbe21dce7092e0eb0d204eac1ca3202a22a2b9b158269aa6
+
+Supporting file hashes (informational, not part of the frozen contract):
+sha256(w12a_common.py) = 0160c7fbd3e385ee2ebec419ccf78e529e0ab4ad48ad48b603d19ca3fe3d9337
+sha256(w12a_fit.py)    = 1dedd05a10cd4959cf698bb3f06aee96e5634f143a980e83a4c4296bd8f349fb
+sha256(w12a_eval.py)   = 9d7e2df168b553a8ed740aa489e2c74467e5cd58d3f4d3a72766a682828eb837
+sha256(fit_train.json) = 1f7dd24b8d39e58051da3532483821942a06edabc2cefecbd1e8380140b096d0
+
+Frozen law: AR1_ENV, coefficients (rho, beta, gamma) = (0.9990596941276166, 1.579285859519589e-05, 0.0)
+Pass criterion: rollout skill at 250 steps beats the AR3 baseline on BOTH prospective tapes
+(tape_3_4242_31_zo.npz, tape_2_8080_32_zo.npz), evaluated once, no retuning after this freeze.
