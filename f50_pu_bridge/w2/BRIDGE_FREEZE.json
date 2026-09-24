@@ -1,0 +1,56 @@
+{
+  "worker": "W2",
+  "description": "Frozen L1.5 observable-bridge models for G_birth, fit by OLS on DEV seeds 1-6 (all rows: phase==49 in full + seeded 20% sample of other phases, rng seed 12345). Threshold fixed at 0 for all families (event_hat = F_hat > 0).",
+  "threshold": 0.0,
+  "source_hashes": {
+    "pu_engine.py_sha256": "4ace90d04b44a9efa873242a4e3751d73dff02a09edb3a501de1b11603f6fc10",
+    "DEV_table.npz_sha256": "082669e153917becad7d507910c79c7fd0a9c6da3d6ddcfb356c05e21f9ae414"
+  },
+  "families": {
+    "F0_LOW": {
+      "role": "reference / own-only ansatz",
+      "basis": ["1", "yo", "sqrt(2*log(n))*sqrt(1-R**2)"],
+      "formula_string": "G_F0 = a0 + a1*yo + a2*sqrt(2*log(n))*sqrt(1-R**2)",
+      "coefficients": {
+        "a0": 1.08824033800514,
+        "a1": -1.2090485046195865,
+        "a2": 0.12544417439152175
+      }
+    },
+    "F1_LEGAL": {
+      "role": "PRIMARY",
+      "basis": ["1", "yo", "yb", "sqrt(2*log(n))*sqrt(1-R**2)", "skew", "cob", "dmu"],
+      "formula_string": "G_F1 = a0 + a1*yo + a2*yb + a3*sqrt(2*log(n))*sqrt(1-R**2) + a4*skew + a5*cob + a6*dmu",
+      "coefficients": {
+        "a0": 0.2494189269759505,
+        "a1": -0.3670112992265494,
+        "a2": -0.04010087689791319,
+        "a3": 0.1878925410677737,
+        "a4": 1.833050384055201,
+        "a5": 0.026036070760012013,
+        "a6": 0.09085124337219859
+      }
+    },
+    "F2_AUG": {
+      "role": "augmented (uses PROPOSED_AUGMENTATION columns so, sb, rho)",
+      "basis": ["1", "yo", "yb", "sqrt(2*log(n))*sqrt(1-R**2)", "skew", "cob", "dmu",
+                "sqrt(2*log(n))*so", "sqrt(2*log(n))*sb", "rho"],
+      "formula_string": "G_F2 = a0 + a1*yo + a2*yb + a3*sqrt(2*log(n))*sqrt(1-R**2) + a4*skew + a5*cob + a6*dmu + a7*sqrt(2*log(n))*so + a8*sqrt(2*log(n))*sb + a9*rho",
+      "coefficients": {
+        "a0": 0.453079247364239,
+        "a1": -0.5401804163014536,
+        "a2": -0.025215508806552094,
+        "a3": 0.030440828004966697,
+        "a4": 0.33540364784826465,
+        "a5": 0.007671907216516102,
+        "a6": 0.03193147433146947,
+        "a7": 0.9438181829566333,
+        "a8": -0.0013379521856482551,
+        "a9": 0.0009339001791915586
+      }
+    }
+  },
+  "fit_method": "ordinary least squares (numpy.linalg.lstsq), unconstrained, no regularization/hyperparameter search",
+  "evaluator": "w2/bridge_eval.py: predict(family, table_dict) -> np.ndarray implements these equations exactly",
+  "note": "F0_LOW is provided for completeness/reference; the task's frozen refit-on-all-seeds requirement targets F1_LEGAL (PRIMARY) and F2_AUG, both included above with full precision."
+}
