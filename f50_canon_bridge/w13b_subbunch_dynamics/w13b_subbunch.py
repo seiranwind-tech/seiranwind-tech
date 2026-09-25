@@ -104,7 +104,7 @@ def pop_attract_mean(active_idx, M2, cnt2, eng, gain_scale):
 def run_tape(f, block, perm, seed):
     eng = make_engine(block, perm, seed); dt = eng.config.dt
     salt_real = salt_real_fn(eng)
-    D = np.load(f, allow_pickle=True); trk = D["trk"]; Z = D["Z"]
+    D = np.load(f, allow_pickle=True, mmap_mode="r"); trk = D["trk"]; Z = D["Z"]
     G, HOME = river_home(trk, h=12)
     res = {m: {k: [[], []] for k in Hs} for m in (["L0_AR3"] + list(LAWS.keys()))}
     g0, B, minsize = 60, 10, 10

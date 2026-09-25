@@ -1,0 +1,24 @@
+{
+  "line": "Claude Cloud exploratory analysis. Not a Research OS or Science Supervisor ruling, not a formal F50 closure claim.",
+  "frozen_law": "SB8_G05: k=8 spherical-kmeans sub-bunches per core, own single-well-style dynamics (salt_MF,j + 0.5*attract_gain*nr(pop_attract - m_j)) integrated per engine dt-step; core prediction = count-weighted mean of sub-bunch centroids",
+  "protocol": "PROTOCOL_W13B.md",
+  "freeze_commit": "b9a12e3",
+  "pass_criterion": "250-step core-centre rollout skill beats universal AR3 on BOTH prospective tapes",
+  "discovery_validation": {
+    "tape_0_1357_11": {"AR3": {"5": 0.930, "50": 0.863, "250": 0.409}, "SB8_G05": {"5": -2.34, "50": -1.74, "250": -1.25}},
+    "tape_0_9753_21": {"AR3": {"5": 0.977, "50": 0.921, "250": 0.517}, "SB8_G05": {"5": -0.20, "50": 0.126, "250": 0.185}},
+    "tape_1_1357_12": {"AR3": {"5": 0.947, "50": 0.899, "250": 0.550}, "SB8_G05": {"5": -2.93, "50": -1.80, "250": -1.39}}
+  },
+  "prospective_result": {
+    "tape_4_5151_41_zo": {
+      "AR3":      {"5steps": 0.9592, "50steps": 0.8977, "250steps": 0.4579},
+      "SB8_G05":  {"5steps": -1.4188, "50steps": -0.8329, "250steps": -0.5141}
+    },
+    "tape_3_6262_42_zo": {
+      "AR3":      {"5steps": 0.9577, "50steps": 0.9018, "250steps": 0.4241},
+      "SB8_G05":  {"5steps": -1.7990, "50steps": -1.0817, "250steps": -0.7334}
+    }
+  },
+  "verdict": "FAIL on both prospective tapes at all three horizons (5, 50, 250 steps). The autonomous sub-bunch law does not beat AR3; it is substantially worse (roughly an order of magnitude in error) at every horizon tested.",
+  "raw_files": ["prospective_w13b.json", "prospective_w13b.log", "discovery_runs/discovery_val.json", "discovery_runs/gain_k_sweep_tape11.md"]
+}
