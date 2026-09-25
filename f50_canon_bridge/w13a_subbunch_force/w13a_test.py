@@ -222,6 +222,7 @@ for g in range(g0, len(G) - 1, 4):
         Wl_other = np.log([nc[b] for b in oth]) if oth else np.zeros(0)
 
         key = "n10-29" if n < 30 else "n30-99" if n < 100 else "n100+"
+        keys_for_row = [key] + (["n30+"] if n >= 30 else [])
 
         if cand == "B":
             rawids, inv = np.unique(cur[idx], return_inverse=True)
@@ -229,7 +230,8 @@ for g in range(g0, len(G) - 1, 4):
             W = np.bincount(inv).astype(float)
             attr_est = subbunch_attr_estimate(C, W, halo, P, Wl_other, rng)
             est = tan(sa_mf_mean + attr_est, M)
-            res[("B", len(rawids), key)].append((cosv(est, full), float(np.linalg.norm(est - full) / np.linalg.norm(full))))
+            for kk in keys_for_row:
+                res[("B", len(rawids), kk)].append((cosv(est, full), float(np.linalg.norm(est - full) / np.linalg.norm(full))))
             continue
 
         for k in ks:
@@ -246,7 +248,8 @@ for g in range(g0, len(G) - 1, 4):
                         spread[j] = float(np.sqrt(max(0.0, 1 - np.mean(mem @ C[j]))))
                 attr_est = subbunch_attr_estimate(C, W, halo, P, Wl_other, rng, spread=spread)
             est = tan(sa_mf_mean + attr_est, M)
-            res[(cand, k, key)].append((cosv(est, full), float(np.linalg.norm(est - full) / np.linalg.norm(full))))
+            for kk in keys_for_row:
+                res[(cand, k, kk)].append((cosv(est, full), float(np.linalg.norm(est - full) / np.linalg.norm(full))))
 
 out = {"tape": f.split("/")[-1], "candidate": cand}
 for key3, v in sorted(res.items(), key=lambda kv: str(kv[0])):

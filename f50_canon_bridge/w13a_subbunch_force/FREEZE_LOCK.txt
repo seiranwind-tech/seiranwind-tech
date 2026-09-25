@@ -1,2 +1,3 @@
 e65d69b35114614445a68fa993dd6df63637ad936186fbad9bbbc54e1c53d6bd  PROTOCOL_W13A.md
-c2d2fcb972b0b7c369732bc8caaffb0110fa2f65c54a6e181f366c9f7b1e9aa8  w13a_test.py
+c2d2fcb972b0b7c369732bc8caaffb0110fa2f65c54a6e181f366c9f7b1e9aa8  w13a_test.py   # frozen at commit time, before opening prospective tapes
+c48d4e5e00424c12479f5a23848e1cffab4918d0e72eb81d7134a15de22e4284  w13a_test.py   # after post-freeze reporting-only edit (added pooled n30+ output bucket; no change to candidate A formulas, salt, or per-bucket results)

@@ -1,0 +1,36 @@
+{
+  "line": "Claude Cloud exploratory analysis. Not a Research OS or Science Supervisor ruling, not an F50 closure claim.",
+  "candidate": "A (spherical k-means sub-bunch, k=32, point masses, weight = count, self-cluster weight corrected to w_j-1)",
+  "dimension_per_core": "32 x (300-d centroid + 1 count) = 9632 numbers, independent of core size n",
+  "pass_criterion": {
+    "n>=30": "median cos >= 0.999",
+    "n>=100": "median cos >= 0.99",
+    "on": ["tape_4_5151_41_zo.npz", "tape_3_6262_42_zo.npz"]
+  },
+  "discovery": {
+    "tape_0_1357_11.npz": {"n30-99_cos_median": 0.907, "n100+_cos_median": 0.772},
+    "tape_1_1357_12.npz": {"n30-99_cos_median": 0.890, "n100+_cos_median": 0.733},
+    "tape_0_9753_21.npz": {"n30-99_cos_median": 0.908, "n100+_cos_median": 0.796},
+    "tape_2_1357_13_zo.npz": {"n30-99_cos_median": 0.888, "n100+_cos_median": 0.802},
+    "tape_1_9753_22_zo.npz": {"n30-99_cos_median": 0.805, "n100+_cos_median": 0.826}
+  },
+  "prospective": {
+    "tape_4_5151_41_zo.npz": {
+      "n10-29": {"count": 109, "cos_median": 0.99891, "cos_p10": 0.9808, "relerr_median": 0.0632},
+      "n30-99": {"count": 153, "cos_median": 0.84474, "cos_p10": 0.4676, "relerr_median": 1.2404},
+      "n100+": {"count": 91, "cos_median": 0.73841, "cos_p10": 0.5177, "relerr_median": 3.109},
+      "n30+_pooled": {"count": 244, "cos_median": 0.8083, "cos_p10": 0.4797, "relerr_median": 1.7702}
+    },
+    "tape_3_6262_42_zo.npz": {
+      "n10-29": {"count": 64, "cos_median": 0.99918, "cos_p10": 0.9867, "relerr_median": 0.0673},
+      "n30-99": {"count": 181, "cos_median": 0.82566, "cos_p10": 0.3927, "relerr_median": 1.3118},
+      "n100+": {"count": 109, "cos_median": 0.80753, "cos_p10": 0.5544, "relerr_median": 2.2859},
+      "n30+_pooled": {"count": 290, "cos_median": 0.81913, "cos_p10": 0.4534, "relerr_median": 1.7824}
+    }
+  },
+  "verdict": "FAIL on both prospective tapes: n>=30 pooled median cos 0.808 / 0.819 (need >=0.999); n>=100 median cos 0.738 / 0.808 (need >=0.99). n10-29 passes but is a trivial/degenerate case since k=32 exceeds the bucket's core sizes (no compression actually occurs there).",
+  "other_candidates_tried": {
+    "B_raw_engine_track_ids": "Rejected before freeze: a river-home core's raw instantaneous group is almost always a single id -- it essentially never subdivides a core, so it is not usable as a sub-bunch scheme.",
+    "C_centroid_plus_spread_scalar_montecarlo": "Rejected before freeze: worse than A at every k tested on discovery (e.g. k=32 tape 11: cos_median 0.591 vs 0.772 for n100+); isotropic spread sampling adds uncorrelated noise rather than fixing the point-mass collapse bias."
+  }
+}
